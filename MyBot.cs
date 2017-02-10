@@ -17,7 +17,6 @@ namespace ClaudetteBot
 
         string[] freshestMemes;
         string[] messages;
-        string[] trystins;
 
         public MyBot()
         {
@@ -33,19 +32,9 @@ namespace ClaudetteBot
 
             messages = new string[]
             {
-                "Why, hello there, Summoner",
+                "Why, hello there",
                 "Hello hello",
-                "Heroes never die",
                 "I can assist you with my botany knowledge!",
-                "Michael Myers is a piece of shit",
-                "Leader is the most useless perk",
-            };
-
-            trystins = new string[]
-            {
-                "Did you do your dishes yet?",
-                "Be nice to mom",
-                "Stop playing thoth"
             };
 
             discord = new DiscordClient(x =>
@@ -66,12 +55,6 @@ namespace ClaudetteBot
                 .Do(async (e) =>
                 {
                     await e.Channel.SendMessage("Hi!");
-                });
-
-            commands.CreateCommand("fuck you")
-                .Do(async (e) =>
-                {
-                    await e.Channel.SendMessage("Fuck you too");
                 });
 
             commands.CreateCommand("You hurt people's feelings")
